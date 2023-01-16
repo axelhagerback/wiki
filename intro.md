@@ -257,30 +257,88 @@ git commit -m "Commit message in quotes"
 
 ---
 
-### **git checkout**
-
-[Official documentation]()
-
-Is used to navigate existing branches and can also discard changes you've made.
-
----
-
 ### **git log**
 
-[Official documentation]()
+[Official documentation](https://git-scm.com/docs/git-log)
+
+This command shows a log of all the commits. Git log shows the commit hash which is the long string of numbers and letters, the author name, the date and the message. If you have many commits you can press the up and down arrow key to scroll between them. And if you press "q" you can start writing in the command line again.
 
 ```
 git log
+
+commit 5681efd9a09f4259dbfcf9a4352d4fe69166b379
+Author: Clark Davis <clark.davis@domain.com>
+Date:   Mon Jan 16 12:30:00 2023 +0100
+
+    Second commit message
+
+commit cb0f2b499f51c2292c2f899fc1a3c5f441cd71cd
+Author: Clark Davis <clark.davis@domain.com>
+Date:   Mon Jan 16 12:00:00 2023 +0100
+
+    Commit message in quotes
+```
+
+If you use the command _--oneline_ it will show each commit on one line and shorter:
+
+```
+git log --oneline
+5681efd Second commit message
+cb0f2b4 Commit message in quotes
 ```
 
 ---
 
-### **git merge**
+### **git checkout**
 
-[Official documentation]()
+[Official documentation](https://git-scm.com/docs/git-checkout)
+
+Is used to navigate existing branches and can also restore working tree files.
+
+Checkout an existing branch:
 
 ```
-git merge
+git checkout <branch_name>
+Switched to branch 'branch_name'
+```
+
+Checkout and create a new branch with that name:
+
+```
+git checkout -b <new_branch>
+Switched to a new branch 'new_branch'
+```
+
+---
+
+### **git reset**
+
+[Official documentation](https://git-scm.com/docs/git-reset)
+
+This is used to move a repository back to a previous commit, which discards any changes made after that commit. To use _git reset_ you need the seven first letters or numbers from the commit hash. When you know that you can reset to a previous version:
+
+```
+git log --oneline
+5681efd Second commit message
+cb0f2b4 Commit message in quotes
+
+git reset cb0f2b4
+
+git log --oneline
+cb0f2b4 Commit message in quotes
+```
+
+You can undo the reset by doing another reset with the commit hash from the newer version. Although the newer commit is not showing up in the log, it is not removed from Git.
+
+```
+git log --oneline
+cb0f2b4 Commit message in quotes
+
+git reset 5681efd
+
+git log -oneline
+5681efd Second commit message
+cb0f2b4 Commit message in quotes
 ```
 
 ---
