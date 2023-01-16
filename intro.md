@@ -236,6 +236,27 @@ git add components
 
 ---
 
+### **git commit**
+
+[Official documentation](https://git-scm.com/docs/git-commit)
+
+```
+git commit
+```
+
+When you use this command it saves your changes to your local Git repository. This allows you to revert back to any of these points where you made a commit. With each commit, it is best to include a message that explains the changes that have been made. This helps to find a particular commit or easily understand the changes.
+
+Use _git commit_ like this:
+
+```
+git commit -m "Commit message in quotes"
+[main ce92997] Commit message in quotes
+ 1 file changed, 10 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+```
+
+---
+
 ### **git checkout**
 
 [Official documentation]()
@@ -261,18 +282,6 @@ git log
 ```
 git merge
 ```
-
----
-
-### **git commit**
-
-[Official documentation]()
-
-```
-git commit
-```
-
-When you use this command it saves your changes to the Git repository. This allows you to revert back to any of these points where you made a commit. Write: "-m "your commit"" and replace "your commit" with a short sentence that describes what changes you have made.
 
 ---
 
