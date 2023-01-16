@@ -65,7 +65,7 @@ It is a good code editor with a lot of extensions that help the process of codin
 
 - Tailwind CSS IntelliSense
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -75,7 +75,7 @@ It is a good code editor with a lot of extensions that help the process of codin
 Microsoft Edge is my browser of choice.  
 It comes already downloaded with any Windows device which is the OS I am using.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -88,7 +88,7 @@ Node.js
 
 Automatically install necessary tools.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -108,7 +108,7 @@ Override the default branch name for new repositories to "main"
 
 Use Windows' default console window as terminal emulator.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -145,7 +145,7 @@ Paste the contents of your SSH public key into the "Key" field and press the "Ad
 
 You have now created a SSH key to use as authentication when connecting with Github.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -166,7 +166,7 @@ git version
 git version 2.39.0.windows.2
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -183,7 +183,7 @@ git config --global user.email "clark.davis@domain.com"
 
 Only writing git config will show a list of all the options that are available to use with it.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -206,7 +206,7 @@ Most git commands need you to initialize a repository first, otherwise you will 
 fatal: not a git repository (or any of the parent directories): .git
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -251,7 +251,7 @@ Changes to be committed:
         modified:   filename.js
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -279,7 +279,7 @@ Delete a branch:
 git branch -d <branch_name>
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -314,7 +314,7 @@ Stage an entire directory:
 git add components
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -333,7 +333,7 @@ git commit -m "Commit message in quotes"
  create mode 100644 index.html
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -367,7 +367,7 @@ git log --oneline
 cb0f2b4 Commit message in quotes
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -391,7 +391,7 @@ git checkout -b <new_branch>
 Switched to a new branch 'new_branch'
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -465,7 +465,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -481,7 +481,7 @@ This allows you to get a copy of an existing Git repository. With this you can m
 git clone <remote_url>
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -501,7 +501,7 @@ You add a remote repository by typing this:
 git remote add origin https://github.com/profile/repository.git
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -515,7 +515,7 @@ This is used to integrate the latest remote changes in a project to your working
 git pull <remote_name> <branch_name>
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -535,7 +535,7 @@ You can also push all the local branches using:
 git push -all
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -551,7 +551,7 @@ This command merges changes from on branch to the current branch:
 git merge <branch_name>
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -573,7 +573,7 @@ C -->|Branch| D[Branch]
 C <-->|Checkout| D
 ```
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 ---
 
@@ -605,7 +605,7 @@ Keep your collaborators file: "git checkout --theirs <filename>"
 
 Another way to fix it is to pull and edit the file. You can do this using Visual Studio Code. VSCode shows you exactly what the conflict is which makes it easy to edit to fix the conflict.
 
-[Top of the page](#)
+[Top of the page](#personal-wiki)
 
 [vscode]: https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
 [vscode-url]: https://code.visualstudio.com/
