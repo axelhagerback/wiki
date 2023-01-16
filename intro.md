@@ -341,6 +341,47 @@ git log -oneline
 cb0f2b4 Commit message in quotes
 ```
 
+Git reset can also unstage changes that you have made:
+
+```
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   filename.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+git add .
+
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   filename.js
+
+git reset
+Unstaged changes after reset:
+M       filename.js
+
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   filename.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+```
+
 ---
 
 **Remote Git commands**
@@ -377,7 +418,21 @@ This adds a remote to a repository on Github. Choose a shortname, often named "o
 
 ### **How git works**
 
-![gitFlow]
+```mermaid
+graph TD
+A[Working directory] -->|Add| B[Staging]
+C -->|Reset| A
+B -->|Reset| A
+B -->|Commit| C[Git directory]
+C -->|Checkout| A
+C -->|Log| C
+C -->|Config| C
+C -->|Version| C
+A <-->|Status| B
+A -->|Init| C
+C -->|Branch| D[Branch]
+C <-->|Checkout| D
+```
 
 ## **FAQ**
 
@@ -428,7 +483,3 @@ Another way to fix it is to pull and edit the file. You can do this using Visual
 [node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [node-url]: https://nodejs.org/
 [gitflow]: gitFlow.png
-
-```
-
-```
