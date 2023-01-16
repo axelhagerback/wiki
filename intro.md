@@ -63,7 +63,7 @@ At the prompt about you can either leave it empty for no passphrase or write a s
 
 Start it by using the line: `$ eval $(ssh-agent -s)`
 
-Then, add the private ssh key to the ssh-agent using the filelocation: `$ ssh-add ~/filename`
+Then, add the private ssh key to the ssh-agent using the file location: `$ ssh-add ~/filename`
 
 **Adding public key to Github**
 
@@ -75,13 +75,41 @@ In the sidebar on the left, press "SSH and GPG keys".
 
 Click "New SSH key" and in the title field write a descriptive label for the key.
 
-Choose either "Authentication key" or "Signing key". For this, chhose "Authentication key" or read more about signing commits [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
+Choose either "Authentication key" or "Signing key". For this, chose "Authentication key" or read more about signing commits [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
 
 Paste the contents of your SSH public key into the "Key" field and press the "Add SSH key" button.
 
 You have now created a SSH key to use as authentication when connecting with Github.
 
 ### **Local Git commands**
+
+---
+
+### **git version**
+
+[Official documentation](https://git-scm.com/docs/git-version)
+
+Use this to check what version of Git you have installed on your device. When used, it will look something like this:
+
+```
+git version
+git version 2.39.0.windows.2
+```
+
+---
+
+### **git config**
+
+[Official documentation](https://git-scm.com/docs/git-config)
+
+There are many settings and configurations that you are able to do with Git. You use git config to assign these settings. Two of the most important ones are _user.name_ and _user.email_. These assign what name and email address the commits will be from. When using _--global_ it will write the setting to all the repositories on a computer. So if you want to use the same name and email in every repository you will write:
+
+```
+git config --global user.name "Clark Davis"
+git config --global user.email "clark.davis@domain.com"
+```
+
+Only writing git config will show a list of all the options that are available to use with it.
 
 ---
 
@@ -108,6 +136,8 @@ fatal: not a git repository (or any of the parent directories): .git
 
 ### **git branch**
 
+[Official documentation]()
+
 With this you can add a branch, view the existing branches and delete a branch.
 
 ```
@@ -119,36 +149,35 @@ git branch
 
 ### **git checkout**
 
+[Official documentation]()
+
 Is used to navigate existing branches and can also discard changes you've made.
 
 ---
 
 ### **git add**
 
+[Official documentation]()
+
 This moves your changes from the working directory to the staging area. Either choosing one file, "filename", a whole directory, "directory", or all files, "-A" or ".".
-
----
-
-### **git version**
-
-Use this to check what version of Git you have installed on your device. When used, it will look something like this:
-
-```
-git version
-git version 2.39.0.windows.2
-```
 
 ---
 
 ### **git status**
 
-When you use this command it returns the current state of the git repository. It shows a file that is in the staging area, but not commited, it
+[Official documentation]()
+
+When you use this command it returns the current state of the git repository. It shows a file that is in the staging area, but not committed, it
 
 ```
 
 ```
 
 ---
+
+### **git log**
+
+[Official documentation]()
 
 ```
 git log
@@ -156,23 +185,25 @@ git log
 
 ---
 
+### **git merge**
+
+[Official documentation]()
+
 ```
 git merge
 ```
 
 ---
 
+### **git commit**
+
+[Official documentation]()
+
 ```
 git commit
 ```
 
 When you use this command it saves your changes to the Git repository. This allows you to revert back to any of these points where you made a commit. Write: "-m "your commit"" and replace "your commit" with a short sentence that describes what changes you have made.
-
----
-
-```
-git config
-```
 
 ---
 
