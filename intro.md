@@ -49,6 +49,38 @@ Override the default branch name for new repositories to "main"
 
 Use Windows' default console window as terminal emulator
 
+### **SSH as authentication on Github**
+
+**Generate a SSH key**  
+Open Git Bash
+
+You generate a keypair using this line: `$ ssh-keygen -t ed25519 -C your_email@example.com`
+
+Enter a filename or press "Enter" to accept default file location.  
+At the prompt about you can either leave it empty for no passphrase or write a secure one for yourself. A passphrase is used as an extra layer of security if someone gains access to every system that uses that SSH key.
+
+**Adding SSH key to the ssh-agent**
+
+Start it by using the line: `$ eval $(ssh-agent -s)`
+
+Then, add the private ssh key to the ssh-agent using the filelocation: `$ ssh-add ~/filename`
+
+**Adding public key to Github**
+
+Copy the contents of your SSH public key.
+
+Then login to your Github account in the browser. Then, in the top right corner, press your profile button and then settings.
+
+In the sidebar on the left, press "SSH and GPG keys".
+
+Click "New SSH key" and in the title field write a descriptive label for the key.
+
+Choose either "Authentication key" or "Signing key". For this, chhose "Authentication key" or read more about signing commits [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
+
+Paste the contents of your SSH public key into the "Key" field and press the "Add SSH key" button.
+
+You have now created a SSH key to use as authentication when connecting with Github.
+
 **Useful Git commands**
 
 ```
