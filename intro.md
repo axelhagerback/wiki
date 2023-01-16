@@ -81,9 +81,9 @@ Paste the contents of your SSH public key into the "Key" field and press the "Ad
 
 You have now created a SSH key to use as authentication when connecting with Github.
 
-### **Local Git commands**
-
 ---
+
+### **Local Git commands**
 
 ### **git version**
 
@@ -240,10 +240,6 @@ git add components
 
 [Official documentation](https://git-scm.com/docs/git-commit)
 
-```
-git commit
-```
-
 When you use this command it saves your changes to your local Git repository. This allows you to revert back to any of these points where you made a commit. With each commit, it is best to include a message that explains the changes that have been made. This helps to find a particular commit or easily understand the changes.
 
 Use _git commit_ like this:
@@ -379,42 +375,83 @@ Changes not staged for commit:
         modified:   filename.js
 
 no changes added to commit (use "git add" and/or "git commit -a")
-
 ```
 
 ---
 
-**Remote Git commands**
+### **Remote Git commands**
+
+### **git clone**
+
+[Official documentation](https://git-scm.com/docs/git-clone)
+
+This allows you to get a copy of an existing Git repository. With this you can make contributions or just look at code other people have made. Cloning will create a directory locally with all the files and repository history.
 
 ```
-git pull
+git clone <remote_url>
 ```
 
-This is used to integrate the remote changes in a project to your working branch.
+---
+
+### **git remote**
+
+[Official documentation](https://git-scm.com/docs/git-remote)
+
+This connects your local repository with a remote one. Often the remote repository is named so you avoid having to remember the URL. The remote repository can have any name, but the common practice is to name it 'origin'.
 
 ```
-
-git push
-
+git remote <command> <remote_name> <remote_URL>
 ```
 
-This is used to share your changes in the code and "push" them, often to a Github repository. You can also add \<remote> \<branch> after "push" which enables you to push it to a certain branch.
+You add a remote repository by typing this:
 
 ```
-
-git clone
-
+git remote add origin https://github.com/profile/repository.git
 ```
 
-This allows you to get a copy of an existing Git repository. With this you can make contributions or just look at code other people have made.
+---
+
+### **git pull**
+
+[Official documentation](https://git-scm.com/docs/git-pull)
+
+This is used to integrate the latest remote changes in a project to your working branch.
 
 ```
-
-git remote add \<shortname> \<repository url>
-
+git pull <branch_name> <remote_name>
 ```
 
-This adds a remote to a repository on Github. Choose a shortname, often named "origin", and the link to the Github repository.
+---
+
+### **git push**
+
+[Official documentation](https://git-scm.com/docs/git-push)
+
+This is used to share your local changes in the code and "push" them, often to a Github repository. You need two parameters to push: the remote repository and the branch that the push is for.
+
+```
+git push <remote_name> <branch_name>
+```
+
+You can also push all the local branches using:
+
+```
+git push -all
+```
+
+---
+
+### **git merge**
+
+[Official documentation](https://git-scm.com/docs/git-merge)
+
+This is used to integrate branches together. Merge combines changes from one branch to another branch. You can for example merge changes in a developer branch to the main branch.
+
+This command merges changes from on branch to the current branch:
+
+```
+git merge <branch_name>
+```
 
 ### **How git works**
 
