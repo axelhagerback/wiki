@@ -203,19 +203,44 @@ git branch -d <branch_name>
 
 ---
 
+### **git add**
+
+[Official documentation](https://git-scm.com/docs/git-add)
+
+This moves your changes from the working directory to the staging area. Either choosing one file, a whole directory or all files. This needs to be done before you are able to commit to a repository.
+
+General use of _git add_:
+
+```
+git add <file or directory name>
+```
+
+There are two ways to add all files not staged:
+
+```
+git add .
+git add -A
+```
+
+Stage a specific file:
+
+```
+git add index.html
+```
+
+Stage an entire directory:
+
+```
+git add components
+```
+
+---
+
 ### **git checkout**
 
 [Official documentation]()
 
 Is used to navigate existing branches and can also discard changes you've made.
-
----
-
-### **git add**
-
-[Official documentation]()
-
-This moves your changes from the working directory to the staging area. Either choosing one file, "filename", a whole directory, "directory", or all files, "-A" or ".".
 
 ---
 
