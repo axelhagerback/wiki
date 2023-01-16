@@ -134,6 +134,50 @@ fatal: not a git repository (or any of the parent directories): .git
 
 ---
 
+### **git status**
+
+[Official documentation](https://git-scm.com/docs/git-status)
+
+When you use this command it returns the current state of the git repository. It will return the current working branch and show files that are in the staging area, but not committed yet. But, if there are no changes it will return that there is nothing to commit:
+
+```
+git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+If you have changes that are not added to the staging area it will look something like this:
+
+```
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   intro.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+But, if you have staged changes it will look something like this:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   intro.md
+
+```
+
+---
+
 ### **git branch**
 
 [Official documentation]()
@@ -160,18 +204,6 @@ Is used to navigate existing branches and can also discard changes you've made.
 [Official documentation]()
 
 This moves your changes from the working directory to the staging area. Either choosing one file, "filename", a whole directory, "directory", or all files, "-A" or ".".
-
----
-
-### **git status**
-
-[Official documentation]()
-
-When you use this command it returns the current state of the git repository. It shows a file that is in the staging area, but not committed, it
-
-```
-
-```
 
 ---
 
