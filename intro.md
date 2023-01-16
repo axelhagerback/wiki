@@ -81,43 +81,102 @@ Paste the contents of your SSH public key into the "Key" field and press the "Ad
 
 You have now created a SSH key to use as authentication when connecting with Github.
 
-**Useful Git commands**
+### **Local Git commands**
+
+---
+
+### **git init**
+
+[Official documentation](https://git-scm.com/docs/git-init)
+
+This initializes a empty Git repository in a certain folder. Use this when setting up a new project. When first used it will look something like this:
 
 ```
 git init
+Initialized empty Git repository in C:/code/testGit/.git/
 ```
 
-This initializes a Git repository in a certain folder.
+If you use this command again, it will reinitialize the existing Git repository.
+
+Most git commands need you to initialize a repository first, otherwise you will get this error:
 
 ```
-git branch
+fatal: not a git repository (or any of the parent directories): .git
 ```
+
+---
+
+### **git branch**
 
 With this you can add a branch, view the existing branches and delete a branch.
 
 ```
-git checkout
+git branch
+
 ```
+
+---
+
+### **git checkout**
 
 Is used to navigate existing branches and can also discard changes you've made.
 
+---
+
+### **git add**
+
+This moves your changes from the working directory to the staging area. Either choosing one file, "filename", a whole directory, "directory", or all files, "-A" or ".".
+
+---
+
+### **git version**
+
+Use this to check what version of Git you have installed on your device. When used, it will look something like this:
+
 ```
-git add \<filename> // git add -A
+git version
+git version 2.39.0.windows.2
 ```
 
-This moves your changes from the working directory to the staging area. Either choosing one file, \<filename>, or every file in the folder, -A.
+---
+
+### **git status**
+
+When you use this command it returns the current state of the git repository. It shows a file that is in the staging area, but not commited, it
 
 ```
-git remote add \<shortname> \<repository url>
-```
-
-This adds a remote to a repository on Github. Choose a shortname, often named "origin", and the link to the Github repository.
 
 ```
-git push
+
+---
+
+```
+git log
 ```
 
-This is used to share your changes in the code and "push" them, often to a Github repository. You can also add \<remote> \<branch> after "push" which enables you to push it to a certain branch.
+---
+
+```
+git merge
+```
+
+---
+
+```
+git commit
+```
+
+When you use this command it saves your changes to the Git repository. This allows you to revert back to any of these points where you made a commit. Write: "-m "your commit"" and replace "your commit" with a short sentence that describes what changes you have made.
+
+---
+
+```
+git config
+```
+
+---
+
+**Remote Git commands**
 
 ```
 git pull
@@ -126,36 +185,28 @@ git pull
 This is used to integrate the remote changes in a project to your working branch.
 
 ```
+
+git push
+
+```
+
+This is used to share your changes in the code and "push" them, often to a Github repository. You can also add \<remote> \<branch> after "push" which enables you to push it to a certain branch.
+
+```
+
 git clone
+
 ```
 
 This allows you to get a copy of an existing Git repository. With this you can make contributions or just look at code other people have made.
 
 ```
-git commit -m "\<your commit>"
-```
 
-When you use this command it saves your changes to the Git repository. This allows you to revert back to any of these points where you made a commit.
+git remote add \<shortname> \<repository url>
 
 ```
-git config --global
-```
 
-- This is used to set your login in info in Git.
-
-  If followed by:
-
-  ```
-  user.email "<example@example.com>"
-  ```
-
-  to set your email
-
-  ```
-  user.name "<username>"
-  ```
-
-  to set your username
+This adds a remote to a repository on Github. Choose a shortname, often named "origin", and the link to the Github repository.
 
 ### **How git works**
 
@@ -198,6 +249,7 @@ Keep your own file: "git checkout --ours <filename>"
 Keep your collaborators file: "git checkout --theirs <filename>"
 
 Another way to fix it is to pull and edit the file. You can do this using Visual Studio Code. VSCode shows you exactly what the conflict is which makes it easy to edit to fix the conflict.
+
 ```
 
 [vscode]: https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
@@ -209,3 +261,7 @@ Another way to fix it is to pull and edit the file. You can do this using Visual
 [node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [node-url]: https://nodejs.org/
 [gitflow]: gitFlow.png
+
+```
+
+```
