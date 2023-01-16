@@ -159,7 +159,7 @@ Your branch is up to date with 'origin/main'.
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   intro.md
+        modified:   filename.js
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -172,21 +172,33 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   intro.md
-
+        modified:   filename.js
 ```
 
 ---
 
 ### **git branch**
 
-[Official documentation]()
+[Official documentation](https://git-scm.com/docs/git-branch)
 
-With this you can add a branch, view the existing branches and delete a branch.
+With this you can add a branch, view the existing branches or delete a branch.
+
+Create new branch:
 
 ```
-git branch
+git branch <branch_name>
+```
 
+List all remote or local branches:
+
+```
+git branch -a
+```
+
+Delete a branch:
+
+```
+git branch -d <branch_name>
 ```
 
 ---
