@@ -1,5 +1,52 @@
 # Personal wiki
 
+## Table of contents
+
+### [Tools](#tools)
+
+- [Code editor](#code-editor)
+- [Browser](#browser)
+- [JavaScript runtime](#javascript-runtime)
+- [Source control management](#source-control-management)
+
+### [SSH as authentication on Github](#ssh-as-authentication-on-github-1)
+
+- [Generate a SSH key](#generate-a-ssh-key)
+- [Adding SSH key to the ssh-agent](#adding-ssh-key-to-the-ssh-agent)
+- [Adding public key to Github](#adding-public-key-to-github)
+
+### [Git commands](#git-commands-1)
+
+- [Local Git commands](#local-git-commands)
+
+  - [git version](#git-version)
+  - [git config](#git-config)
+  - [git init](#git-init)
+  - [git status](#git-status)
+  - [git branch](#git-branch)
+  - [git add](#git-add)
+  - [git commit](#git-commit)
+  - [git log](#git-log)
+  - [git checkout](#git-checkout)
+  - [git reset](#git-reset)
+
+- [Remote Git commands](#remote-git-commands)
+  - [git clone](#git-clone)
+  - [git remote](#git-remote)
+  - [git pull](#git-pull)
+  - [git push](#git-push)
+  - [git merge](#git-merge)
+
+### [How git works](#how-git-works-1)
+
+### [FAQ](#faq-1)
+
+- [What is Github?](#what-is-github)
+- [Why do I need Github?](#why-do-i-need-github)
+- [Common issues when collaborating using Git](#common-issues-when-collaborating-using-git)
+
+---
+
 ## Tools
 
 ### **Code editor**
@@ -18,20 +65,32 @@ It is a good code editor with a lot of extensions that help the process of codin
 
 - Tailwind CSS IntelliSense
 
+[Top of the page](#)
+
+---
+
 ### **Browser**
 
 [![Edge][edge]][edge-url]  
 Microsoft Edge is my browser of choice.  
 It comes already downloaded with any Windows device which is the OS I am using.
 
-### **Javascript runtime**
+[Top of the page](#)
+
+---
+
+### **JavaScript runtime**
 
 [![Node][node.js]][node-url]  
 Node.js
 
 **Installation process**
 
-Automatically install necessary tools
+Automatically install necessary tools.
+
+[Top of the page](#)
+
+---
 
 ### **Source control management**
 
@@ -47,11 +106,16 @@ Choose Visual Studio Code as Git's default editor
 
 Override the default branch name for new repositories to "main"
 
-Use Windows' default console window as terminal emulator
+Use Windows' default console window as terminal emulator.
+
+[Top of the page](#)
+
+---
 
 ### **SSH as authentication on Github**
 
-**Generate a SSH key**  
+### **Generate a SSH key**
+
 Open Git Bash
 
 You generate a keypair using this line: `$ ssh-keygen -t ed25519 -C your_email@example.com`
@@ -59,13 +123,13 @@ You generate a keypair using this line: `$ ssh-keygen -t ed25519 -C your_email@e
 Enter a filename or press "Enter" to accept default file location.  
 At the prompt about you can either leave it empty for no passphrase or write a secure one for yourself. A passphrase is used as an extra layer of security if someone gains access to every system that uses that SSH key.
 
-**Adding SSH key to the ssh-agent**
+### **Adding SSH key to the ssh-agent**
 
 Start it by using the line: `$ eval $(ssh-agent -s)`
 
 Then, add the private ssh key to the ssh-agent using the file location: `$ ssh-add ~/filename`
 
-**Adding public key to Github**
+### **Adding public key to Github**
 
 Copy the contents of your SSH public key.
 
@@ -80,6 +144,12 @@ Choose either "Authentication key" or "Signing key". For this, chose "Authentica
 Paste the contents of your SSH public key into the "Key" field and press the "Add SSH key" button.
 
 You have now created a SSH key to use as authentication when connecting with Github.
+
+[Top of the page](#)
+
+---
+
+## **Git commands**
 
 ---
 
@@ -96,6 +166,8 @@ git version
 git version 2.39.0.windows.2
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git config**
@@ -110,6 +182,8 @@ git config --global user.email "clark.davis@domain.com"
 ```
 
 Only writing git config will show a list of all the options that are available to use with it.
+
+[Top of the page](#)
 
 ---
 
@@ -131,6 +205,8 @@ Most git commands need you to initialize a repository first, otherwise you will 
 ```
 fatal: not a git repository (or any of the parent directories): .git
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -175,6 +251,8 @@ Changes to be committed:
         modified:   filename.js
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git branch**
@@ -200,6 +278,8 @@ Delete a branch:
 ```
 git branch -d <branch_name>
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -234,6 +314,8 @@ Stage an entire directory:
 git add components
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git commit**
@@ -250,6 +332,8 @@ git commit -m "Commit message in quotes"
  1 file changed, 10 insertions(+), 0 deletions(-)
  create mode 100644 index.html
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -283,6 +367,8 @@ git log --oneline
 cb0f2b4 Commit message in quotes
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git checkout**
@@ -304,6 +390,8 @@ Checkout and create a new branch with that name:
 git checkout -b <new_branch>
 Switched to a new branch 'new_branch'
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -377,6 +465,8 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **Remote Git commands**
@@ -390,6 +480,8 @@ This allows you to get a copy of an existing Git repository. With this you can m
 ```
 git clone <remote_url>
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -409,6 +501,8 @@ You add a remote repository by typing this:
 git remote add origin https://github.com/profile/repository.git
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git pull**
@@ -418,8 +512,10 @@ git remote add origin https://github.com/profile/repository.git
 This is used to integrate the latest remote changes in a project to your working branch.
 
 ```
-git pull <branch_name> <remote_name>
+git pull <remote_name> <branch_name>
 ```
+
+[Top of the page](#)
 
 ---
 
@@ -439,6 +535,8 @@ You can also push all the local branches using:
 git push -all
 ```
 
+[Top of the page](#)
+
 ---
 
 ### **git merge**
@@ -452,6 +550,10 @@ This command merges changes from on branch to the current branch:
 ```
 git merge <branch_name>
 ```
+
+[Top of the page](#)
+
+---
 
 ### **How git works**
 
@@ -471,27 +573,21 @@ C -->|Branch| D[Branch]
 C <-->|Checkout| D
 ```
 
+[Top of the page](#)
+
+---
+
 ## **FAQ**
 
-**What is Github?**
-
-```
+### **What is Github?**
 
 Github is a software development platform online. You can use it to store your projects, track your progress and collaborate on projects with other users. It is very easy to access your code or anyone else's. You can look at what other people have done, download their code, and even contribute to it.
 
-```
-
-**Why do I need Github?**
-
-```
+### **Why do I need Github?**
 
 Github is an easy way to store your code and collaborate with others on projects. When someone contributes with a change you can always look at what they have changed and simply pull the code so you have the latest changes locally.
 
-```
-
-**Common issues when collaborating using Git**
-
-```
+### **Common issues when collaborating using Git**
 
 Merge conflicts can be very annoying, but there are some things you can try and do to avoid them:
 
@@ -509,7 +605,7 @@ Keep your collaborators file: "git checkout --theirs <filename>"
 
 Another way to fix it is to pull and edit the file. You can do this using Visual Studio Code. VSCode shows you exactly what the conflict is which makes it easy to edit to fix the conflict.
 
-```
+[Top of the page](#)
 
 [vscode]: https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
 [vscode-url]: https://code.visualstudio.com/
